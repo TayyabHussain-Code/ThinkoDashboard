@@ -8,9 +8,6 @@ const Home = () => {
     <>
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: '20px', justifyContent: 'center'}} >
           <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
         </Box>
 
         <Task />

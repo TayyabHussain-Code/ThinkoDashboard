@@ -61,14 +61,10 @@ const Book = () => {
     <>
         <Typography sx={{ p: 3, px: '50px', fontSize: '30px' }}>🔥 Tasks</Typography>
         <Box sx={{ py: "20px", px: '20px' }}>
-          <Box sx={{ width: { lg: "100%" }, margin: "0 auto" }}>
             <Box
               sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                gap: 2,
-                mt: 4,
+                display:'grid',
+                
               }}
             >
               {cardData.map((card, index) => (
@@ -137,7 +133,6 @@ const Book = () => {
               ))}
             </Box>
           </Box>
-        </Box>
 
       {/* Drawer Component */}
       <Drawer

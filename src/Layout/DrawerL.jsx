@@ -1,195 +1,85 @@
-import React from 'react'
-import SettingsIcon from '@mui/icons-material/Settings';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import List from '@mui/material/List';
-import { useNavigate } from 'react-router-dom';
-import { Divider } from '@mui/material';
+import React from 'react';
+import {
+  List, ListItem, ListItemButton, ListItemIcon, ListItemText, Divider
+} from '@mui/material';
+import {
+  Dashboard as DashboardIcon,
+  Inbox as InboxIcon,
+  CalendarMonth as CalendarMonthIcon,
+  BarChart as BarChartIcon,
+  Assignment as AssignmentIcon,
+  AutoStories as AutoStoriesIcon,
+  Settings as SettingsIcon
+} from '@mui/icons-material';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-const Drawer = ({open}) => {
-    const navigate = useNavigate();
-    return (
-        <div>
-            <List>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr: 'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <DashboardIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Dashboard"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                        />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/products") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent:  'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr: 'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <InboxIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Products"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                        />
-                    </ListItemButton>
-                </ListItem>
-            </List>
-            <Divider />
-            <List>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/calender") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent:  'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr:  'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <CalendarMonthIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Calender"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                            
-                        />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/barchart") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent:  'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr:  'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <BarChartIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Bar Chart"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                            
-                        />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/timeline") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr:  'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <AssignmentIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Timeline"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                            
-                        />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/book") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr:  'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <AutoStoriesIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Task details"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                            
-                        />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding sx={{ display: 'block' }} onClick={() => { navigate("/setting") }}>
-                    <ListItemButton
-                        sx={{
-                            minHeight: 48,
-                            px: 2.5,
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr: 'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <SettingsIcon />
-                        </ListItemIcon>
-                        <ListItemText
-                            primary="Setting"
-                            sx={{marginLeft:'5px',opacity: open ? 1 : 0,}}
-                        />
-                    </ListItemButton>
-                </ListItem>
-            </List>
-        </div>
-    )
-}
+const Drawer = ({ open }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-export default Drawer
+  const menuItems = [
+    { label: 'Dashboard', icon: <DashboardIcon />, path: '/' },
+    { label: 'Products', icon: <InboxIcon />, path: '/products' },
+    { label: 'Calender', icon: <CalendarMonthIcon />, path: '/calender' },
+    { label: 'Bar Chart', icon: <BarChartIcon />, path: '/barchart' },
+    { label: 'Timeline', icon: <AssignmentIcon />, path: '/timeline' },
+    { label: 'Task details', icon: <AutoStoriesIcon />, path: '/book' },
+    { label: 'Setting', icon: <SettingsIcon />, path: '/setting' },
+  ];
+
+  return (
+    <List>
+      {menuItems.map((item) => {
+        const isActive = location.pathname === item.path;
+
+        return (
+          <ListItem
+            key={item.label}
+            disablePadding
+            sx={{ display: 'block' }}
+            onClick={() => navigate(item.path)}
+          >
+            <ListItemButton
+              selected={isActive}
+              sx={{
+                minHeight: 48,             // Horizontal margin
+                px:2,
+                mx:1,
+                my:1,
+                borderRadius: 2,     // Rounded corners (theme.spacing(2) = 16px)
+                justifyContent: 'flex-start',
+                px: 2,
+                backgroundColor: isActive ? 'blue !important' : 'transparent',
+                color: isActive ? 'white' : 'inherit',
+                '&:hover': {
+                  backgroundColor: isActive ? 'primary.dark' : 'action.hover',
+                },
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 1.5 : 'auto',
+                  justifyContent: 'center',
+                  color: isActive ? 'white' : 'inherit',
+                }}
+              >
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText
+                primary={item.label}
+                sx={{
+                  marginLeft: '5px',
+                  opacity: open ? 1 : 0,
+                  color: isActive ? 'white' : 'inherit',
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+        );
+      })}   
+    </List>
+  );
+};
+
+export default Drawer;
