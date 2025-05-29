@@ -83,10 +83,9 @@ export default function SideNav() {
                     display: { xs: 'none', md: 'block' }
                 }}
             >
-                <DrawerHeader>
+                <DrawerHeader sx={{marginBottom:'100px'}}>
                     <img src='https://thinkoworkspace.com/public/user-uploads/app-logo/7c9162da7888a26eaf19c958fd993b10.png' alt="logo" width={30} height={30} style={{margin:'0 auto'}} />
                 </DrawerHeader>
-                <Divider />
                 {drawer}
             </Drawer>
 
